@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const ShowUsers = () => {
 
@@ -33,6 +34,7 @@ const ShowUsers = () => {
     }
   }
   
+  const navigate = useNavigate()
 
   return (
     <div className='h-full flex justify-center items-center'>
@@ -53,7 +55,7 @@ const ShowUsers = () => {
             </div>
 
             <div className='flex justify-around mt-4'>
-              <button className='bg-green-800 rounded-md px-3 py-2 text-white font-semibold'>Edit</button>
+              <button onClick={() => navigate(`/update`)} className='bg-green-800 rounded-md px-3 py-2 text-white font-semibold'>Edit</button>
               <button onClick={() => deleteHandler(userData._id)} className='bg-red-600 rounded-md px-3 py-2 text-white font-semibold'>Delete</button>
             </div>
           </div>
