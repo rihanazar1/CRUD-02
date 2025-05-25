@@ -55,7 +55,7 @@ const ShowUsers = () => {
             </div>
 
             <div className='flex justify-around mt-4'>
-              <button onClick={() => navigate(`/update`)} className='bg-green-800 rounded-md px-3 py-2 text-white font-semibold'>Edit</button>
+              <button onClick={() => navigate(`/update/${userData._id}`)} className='bg-green-800 rounded-md px-3 py-2 text-white font-semibold'>Edit</button>
               <button onClick={() => deleteHandler(userData._id)} className='bg-red-600 rounded-md px-3 py-2 text-white font-semibold'>Delete</button>
             </div>
           </div>
